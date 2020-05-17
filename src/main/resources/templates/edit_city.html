@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактор города</title>
+</head>
+<body>
+<form th:action="@{/city/edit/{id}(id = ${city.id})}" method="post" enctype="text/plain">
+    <div>
+        <label>Название города</label>
+        <input type="text" name="cityName" th:value="${city.name}">
+    </div>
+    <button type="submit">Сохранить</button>
+</form>
+</body>
+</html>

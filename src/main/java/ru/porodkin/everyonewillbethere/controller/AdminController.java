@@ -12,13 +12,13 @@ import java.time.DayOfWeek;
 
 @Controller
 @RequestMapping("/admin")
-public class adminController {
+public class AdminController {
 
     private final VoyageRepository voyageRepository;
     private final BusStationRepository busStationRepository;
     private final VoyageService service;
 
-    public adminController(VoyageRepository voyageRepository, BusStationRepository busStationRepository, VoyageService service) {
+    public AdminController(VoyageRepository voyageRepository, BusStationRepository busStationRepository, VoyageService service) {
         this.voyageRepository = voyageRepository;
         this.busStationRepository = busStationRepository;
         this.service = service;

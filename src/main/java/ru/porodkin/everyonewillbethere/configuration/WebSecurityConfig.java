@@ -28,7 +28,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                     .disable()
                 .authorizeRequests()
                     .antMatchers("/", "/registration", "/js/**").permitAll()
-                    .antMatchers("/admin/**","/add-city/**").hasAnyAuthority("ADMIN", "SUPER_ADMIN")
+                    .antMatchers("/admin/**","/city/**").hasAnyAuthority("ADMIN", "SUPER_ADMIN")
 //                    .antMatchers("/admin/users").hasAnyAuthority("SUPER_ADMIN")
                     .anyRequest().authenticated()
                 .and()

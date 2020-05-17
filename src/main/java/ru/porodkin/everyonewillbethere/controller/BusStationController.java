@@ -53,7 +53,7 @@ public class BusStationController {
         return "edit_station";
     }
 
-    @PostMapping("{station}")
+    @PostMapping("/edit/{station}")
     public String putStation(@PathVariable("station") BusStation stationFromDb, @RequestBody String station) {
         service.updateEntity(stationFromDb, station);
 

@@ -6,7 +6,7 @@
     <title>Редактор станции</title>
 </head>
 <body>
-<form th:action="@{/station/{id}(id = ${station.id})}" method="post" enctype="text/plain">
+<form th:action="@{/station/edit/{id}(id = ${station.id})}" method="post" enctype="text/plain">
     <div>
         <label><h3>Автобусная станция</h3></label>
         <div>

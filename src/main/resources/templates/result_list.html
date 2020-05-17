@@ -36,11 +36,13 @@
         <tr th:each="voyage,iter : ${voyages}">
             <td th:text="${iter.index + 1}"></td>
             <td>
+                <span th:text="${voyage.travelTimeDeparture}"></span><br>
                 <a th:href="@{/station/{id}(id = ${voyage.getPointOfDeparture().id})}">
-                    <span th:name="${voyage.getPointOfDeparture().name}" th:text="${voyage.getPointOfDeparture().name}"></span>
+                    <span th:text="${voyage.getPointOfDeparture().name}"></span>
                 </a>
             </td>
             <td>
+                <span th:text="${voyage.travelTimeDestination}"></span><br>
                 <a th:href="@{/station/{id}(id = ${voyage.getPointOfDestination().id})}" >
                     <span th:text="${voyage.getPointOfDestination().name}"></span>
                 </a>
