@@ -1,46 +1,46 @@
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values ( 1, 'Автовокзал Благовещенск', 'ул. 50 лет Октября, 44', '06:00', '23:00', '+7 999 888 77 66', 1)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values ( 2, 'Автовокзал Архангельска', 'пр.Дзержинского, д.2', '06:00', '23:00', '+7 999 888 77 66', 2)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values ( 3, 'Автовокзал Астрахани', 'ул. Анри Барбюса, 29В', '06:00', '23:00', '+7 999 888 77 66', 3)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values ( 4, 'Автовокзал Белгороа', 'пр-кт Б. Хмельницкого, 160', '06:00', '23:00', '+7 999 888 77 66', 4)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values ( 5, 'Автовокзал Брянска', 'ул. Пересвета, 1А', '06:00', '23:00', '+7 999 888 77 66', 5)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values ( 6, 'Автовокзал Владимира', 'Вокзальная площадь, 1', '06:00', '23:00', '+7 999 888 77 66', 6)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values ( 7, 'Автовокзал Волгограда', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 7)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values ( 8, 'Автовокзал Вологды', 'пл. Бабушкина, 10', '06:00', '23:00', '+7 999 888 77 66', 8)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values ( 9, 'Автовокзал Воронежа', 'Московский проспект, 17', '06:00', '23:00', '+7 999 888 77 66', 9)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (10, 'Автовокзал Иванова', 'ул. Лежневская, 152', '06:00', '23:00', '+7 999 888 77 66', 10)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (11, 'Автовокзал Иркутска', 'ул. Октябрьской Революции, 11', '06:00', '23:00', '+7 999 888 77 66', 11)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (12, 'Автовокзал Калининграда', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 12)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (13, 'Автовокзал Калуги', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 13)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (14, 'Автовокзал Кемерово', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 14)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (15, 'Автовокзал Кирова', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 15)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (16, 'Автовокзал Костромы', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 16)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (17, 'Автовокзал Кургана', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 17)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (18, 'Автовокзал Курска', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 18)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (19, 'Автовокзал Санкт-Петербурга','Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 19)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (20, 'Автовокзал Липецка', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 20)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (21, 'Автовокзал Магадана', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 21)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (22, 'Автовокзал Москвы', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 22)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (23, 'Автовокзал Мурманска', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 23)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (24, 'Автовокзал Нижний Новгорода', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 24)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (25, 'Автовокзал Новгорода', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 25)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (26, 'Автовокзал Новосибирска', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 26)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (27, 'Автовокзал Омска', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 27)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (28, 'Автовокзал Оренбурга', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 28)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (29, 'Автовокзал Орла', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 29)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (30, 'Автовокзал Пензы', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 30)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (31, 'Автовокзал Пскова', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 31)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (32, 'Автовокзал Ростова-на-Дону', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 32)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (33, 'Автовокзал Рязани', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 33)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (34, 'Автовокзал Самары', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 34)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (35, 'Автовокзал Саратова', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 35)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (36, 'Автовокзал Южно-Сахалинска', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 36)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (37, 'Автовокзал Екатеринбурга', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 37)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (38, 'Автовокзал Смоленска', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 38)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (39, 'Автовокзал Тамбова', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 39)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (40, 'Автовокзал Твери', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 40)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (41, 'Автовокзал Томска', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 41)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (42, 'Автовокзал Тулы',  'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 42)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (43, 'Автовокзал Тюмени', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 43)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (44, 'Автовокзал Ульяновска', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 44)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (45, 'Автовокзал Челябинска', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 45)
-insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (46, 'Автовокзал Ярославля', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 46)
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values ( 1, 'Автовокзал Благовещенск', 'ул. 50 лет Октября, 44', '06:00', '23:00', '+7 999 888 77 66', 1);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values ( 2, 'Автовокзал Архангельска', 'пр.Дзержинского, д.2', '06:00', '23:00', '+7 999 888 77 66', 2);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values ( 3, 'Автовокзал Астрахани', 'ул. Анри Барбюса, 29В', '06:00', '23:00', '+7 999 888 77 66', 3);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values ( 4, 'Автовокзал Белгороа', 'пр-кт Б. Хмельницкого, 160', '06:00', '23:00', '+7 999 888 77 66', 4);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values ( 5, 'Автовокзал Брянска', 'ул. Пересвета, 1А', '06:00', '23:00', '+7 999 888 77 66', 5);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values ( 6, 'Автовокзал Владимира', 'Вокзальная площадь, 1', '06:00', '23:00', '+7 999 888 77 66', 6);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values ( 7, 'Автовокзал Волгограда', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 7);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values ( 8, 'Автовокзал Вологды', 'пл. Бабушкина, 10', '06:00', '23:00', '+7 999 888 77 66', 8);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values ( 9, 'Автовокзал Воронежа', 'Московский проспект, 17', '06:00', '23:00', '+7 999 888 77 66', 9);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (10, 'Автовокзал Иванова', 'ул. Лежневская, 152', '06:00', '23:00', '+7 999 888 77 66', 10);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (11, 'Автовокзал Иркутска', 'ул. Октябрьской Революции, 11', '06:00', '23:00', '+7 999 888 77 66', 11);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (12, 'Автовокзал Калининграда', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 12);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (13, 'Автовокзал Калуги', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 13);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (14, 'Автовокзал Кемерово', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 14);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (15, 'Автовокзал Кирова', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 15);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (16, 'Автовокзал Костромы', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 16);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (17, 'Автовокзал Кургана', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 17);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (18, 'Автовокзал Курска', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 18);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (19, 'Автовокзал Санкт-Петербурга','Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 19);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (20, 'Автовокзал Липецка', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 20);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (21, 'Автовокзал Магадана', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 21);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (22, 'Автовокзал Москвы', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 22);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (23, 'Автовокзал Мурманска', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 23);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (24, 'Автовокзал Нижний Новгорода', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 24);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (25, 'Автовокзал Новгорода', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 25);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (26, 'Автовокзал Новосибирска', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 26);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (27, 'Автовокзал Омска', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 27);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (28, 'Автовокзал Оренбурга', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 28);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (29, 'Автовокзал Орла', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 29);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (30, 'Автовокзал Пензы', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 30);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (31, 'Автовокзал Пскова', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 31);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (32, 'Автовокзал Ростова-на-Дону', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 32);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (33, 'Автовокзал Рязани', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 33);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (34, 'Автовокзал Самары', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 34);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (35, 'Автовокзал Саратова', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 35);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (36, 'Автовокзал Южно-Сахалинска', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 36);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (37, 'Автовокзал Екатеринбурга', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 37);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (38, 'Автовокзал Смоленска', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 38);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (39, 'Автовокзал Тамбова', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 39);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (40, 'Автовокзал Твери', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 40);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (41, 'Автовокзал Томска', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 41);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (42, 'Автовокзал Тулы',  'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 42);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (43, 'Автовокзал Тюмени', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 43);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (44, 'Автовокзал Ульяновска', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 44);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (45, 'Автовокзал Челябинска', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 45);
+insert into bus_station (id, name, address, start_time, end_time, phone, city_id) values (46, 'Автовокзал Ярославля', 'Адрес уточняется', '06:00', '23:00', '+7 999 888 77 66', 46);
