@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Автовокзал</title>
+</head>
+<body>
+    <a href="" onclick="javascript:history.back(); return false;">Назад</a>
+    <div>
+        <label>Название</label>
+        <span th:text="${busStation.name}"></span>
+    </div>
+    <div>
+        <label>Адрес</label>
+        <span th:text="${busStation.address}"></span>
+    </div>
+    <div>
+        <label>Время работы</label>
+        <span th:text="${busStation.startTime + ' - ' + busStation.endTime}"></span>
+    </div>
+    <div>
+        <label>Телефон</label>
+        <span th:text="${busStation.phone}"></span>
+    </div>
+</body>
+</html>

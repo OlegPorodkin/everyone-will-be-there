@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Все там будем</title>
+</head>
+<body>
+<form action="/result" method="get">
+    <div>
+        <label>Откуда</label>
+        <input type="text" name="fromDest" required placeholder="Откуда"/>
+    </div>
+    <div>
+        <label>Куда</label>
+        <input type="text" name="toDest" required placeholder="Откуда"/>
+    </div>
+    <button type="submit">Найти</button>
+</form>
+</body>
+</html>

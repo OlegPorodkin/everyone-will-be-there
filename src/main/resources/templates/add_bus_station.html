@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить автобусную станцию</title>
+</head>
+<body>
+<a href="/">Главная</a>
+<a href="/admin">Консоль администратора</a>
+<form action="/station" method="post" enctype="text/plain">
+    <div>
+        <label><h3>Автобусная станция</h3></label>
+        <div>
+            <label>Название</label>
+            <input type="text" name="name">
+        </div>
+        <div>
+            <label>Адрес</label>
+            <input type="text" name="address">
+        </div>
+        <div>
+            <label>Телефон</label>
+            <input type="tel" name="phone">
+        </div>
+        <div>
+            <label>Время открытия</label>
+            <input type="text" name="startTime">
+        </div>
+        <div>
+            <label>Время закрытия</label>
+            <input type="text" name="endTime">
+        </div>
+        <div>
+            <label>Город отправления</label>
+            <select name="city">
+                <option th:each="city : ${cities}"
+                        th:value="${city.id}"
+                        th:text="${city.name}">
+                </option>
+            </select>
+            <a href="/add-city">+</a>
+        </div>
+    </div>
+    <button type="submit">Сохранить</button>
+</form>
+</body>
+</html>

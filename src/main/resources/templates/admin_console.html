@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Админка</title>
+</head>
+<body>
+<a href="/">Главная</a>
+<form action="/admin" method="post" enctype="text/plain">
+    <div>
+        <label><h3>Пункт отправления</h3></label>
+        <select name="pointOfDeparture">
+            <option th:each="busStation : ${busStations}"
+                    th:value="${busStation.id}"
+                    th:text="${busStation.name}">
+            </option>
+        </select>
+        <a href="/station">+</a>
+        <div>
+            <label><h4>Время отправления</h4></label>
+            <input type="text" name="travelTimeDeparture">
+        </div>
+    </div>
+    <div>
+        <label><h3>Пункт назначения</h3></label>
+        <select name="pointOfDestination">
+            <option th:each="busStation : ${busStations}"
+                    th:value="${busStation.id}"
+                    th:text="${busStation.name}">
+            </option>
+        </select>
+        <a href="/station">+</a>
+        <div>
+            <label><h4>Время прибытия</h4></label>
+            <input type="text" name="travelTimeDestination">
+        </div>
+    </div>
+    <div>
+        <label><h3>Дни отправления</h3></label>
+        <th:block th:each="day : ${dayOfWeek}">
+            <br>
+            <input type="checkbox" name="daysToDeparts" th:value="${day.value}">
+            <label th:text="${day.name()}"></label>
+        </th:block>
+    </div>
+    <div>
+        <label><h3>Время в пути</h3></label>
+        <input type="text" name="travelTime">
+    </div>
+    <div>
+        <label><h3>Цена</h3></label>
+        <input type="number" name="price">
+    </div>
+    <button type="submit">Добавить</button>
+</form>
+<div>
+    <div th:each="voyage : ${voyages}">
+        <a th:href="@{/admin/{id}(id = ${voyage.id})}">
+            <span th:text="${voyage.pointOfDeparture.name + ' - ' + voyage.pointOfDestination.name}"></span>
+        </a>
+        <a th:href="@{/admin/delete/{id}(id = ${voyage.id})}">
+            <span th:text="Удалить"></span>
+        </a>
+
+    </div>
+</div>
+</body>
+</html>

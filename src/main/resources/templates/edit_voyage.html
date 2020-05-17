@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      lang="en">
+<head>
+    <meta charset="UTF-8" content="application/json">
+    <title>Редактирования напрвления</title>
+</head>
+<body>
+<form th:action="@{/admin/{id}(id = ${voyage.id})}" method="post" enctype="text/plain">
+    <div>
+        <label><h3>Пункт отправления</h3></label>
+        <select name="pointOfDeparture">
+            <option th:each="busStation : ${busStations}"
+                    th:value="${busStation.id}"
+                    th:text="${busStation.name}"
+                    th:selected="${busStation.id == voyage.pointOfDeparture.id}">
+            </option>
+        </select>
+        <div>
+            <label><h4>Время отправления</h4></label>
+            <input type="text" name="travelTimeDeparture" th:value="${voyage.travelTimeDeparture}">
+        </div>
+    </div>
+    <div>
+        <label><h3>Пункт назначения</h3></label>
+        <select name="pointOfDestination">
+            <option th:each="busStation : ${busStations}"
+                    th:value="${busStation.id}"
+                    th:text="${busStation.name}"
+                    th:selected="${busStation.id == voyage.pointOfDestination.id}">
+            </option>
+        </select>
+        <div>
+            <label><h4>Время прибытия</h4></label>
+            <input type="text" name="travelTimeDestination" th:value="${voyage.travelTimeDestination}">
+        </div>
+    </div>
+    <div>
+        <label><h3>Дни отправления</h3></label>
+        <th:block th:each="day : ${dayOfWeek}">
+            <br>
+            <input type="checkbox" name="daysToDeparts" th:value="${day.value}" th:checked="*{voyage.dayOfDeparture.contains(day)}">
+            <label th:text="${day.name()}"></label>
+        </th:block>
+    </div>
+    <div>
+        <label><h3>Время в пути</h3></label>
+        <input type="text" name="travelTime" th:value="${voyage.travelTime}">
+    </div>
+    <div>
+        <label><h3>Цена</h3></label>
+        <input type="number" name="price" th:value="${voyage.price}">
+    </div>
+    <button type="submit">Сохранить</button>
+</form>
+</body>
+</html>
