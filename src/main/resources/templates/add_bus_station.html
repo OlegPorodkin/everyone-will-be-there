@@ -44,5 +44,16 @@
     </div>
     <button type="submit">Сохранить</button>
 </form>
+<div>
+    <div th:each="station : ${stations}">
+        <a th:href="@{/station/edit/{id}(id = ${station.id})}">
+            <span th:text="${station.name + ' - ' + station.city.name}"></span>
+        </a>
+        <a th:href="@{/station/delete/{id}(id = ${station.id})}">
+            <span th:text="Удалить"></span>
+        </a>
+
+    </div>
+</div>
 </body>
 </html>

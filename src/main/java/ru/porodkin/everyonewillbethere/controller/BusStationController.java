@@ -4,9 +4,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import ru.porodkin.everyonewillbethere.entity.BusStation;
+import ru.porodkin.everyonewillbethere.entity.Voyage;
 import ru.porodkin.everyonewillbethere.repository.BusStationRepository;
 import ru.porodkin.everyonewillbethere.repository.CityRepository;
+import ru.porodkin.everyonewillbethere.service.BusStationService;
 
+import java.time.DayOfWeek;
 import java.time.LocalTime;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -18,36 +21,20 @@ public class BusStationController {
 
     private final BusStationRepository busStationRepository;
     private final CityRepository cityRepository;
+    private final BusStationService service;
 
-    public BusStationController(BusStationRepository busStationRepository, CityRepository cityRepository) {
+    public BusStationController(BusStationRepository busStationRepository, CityRepository cityRepository, BusStationService service) {
         this.busStationRepository = busStationRepository;
         this.cityRepository = cityRepository;
+        this.service = service;
     }
 
     @GetMapping
     public String viewAddStation(Model model) {
         model.addAttribute("cities", cityRepository.findAll());
+        model.addAttribute("stations", busStationRepository.findAll());
 
         return "add_bus_station";
-    }
-
-    @PostMapping
-    public String addStation(@RequestBody String station) {
-
-        String[] split = station.split("\n");
-        Map<String, String> values = new HashMap<>();
-
-        BusStation busStation = new BusStation();
-
-        Arrays.stream(split).map(s -> s.split("=")).forEach(keyVal -> values.put(keyVal[0], keyVal[1]));
-
-        initBusStationDeparture(values, busStation);
-
-        busStation.setCity(cityRepository.getOne(Long.valueOf(strip(values, "city"))));
-
-        busStationRepository.save(busStation);
-
-        return "redirect:/station";
     }
 
     @GetMapping("{id}")
@@ -58,15 +45,34 @@ public class BusStationController {
         return "bus_description";
     }
 
-    private void initBusStationDeparture(Map<String, String> values, BusStation pointOfDeparture) {
-        pointOfDeparture.setName(values.get("name"));
-        pointOfDeparture.setAddress(values.get("address"));
-        pointOfDeparture.setPhone(values.get("phone"));
-        pointOfDeparture.setStartTime(LocalTime.parse(strip(values, "startTime")));
-        pointOfDeparture.setEndTime(LocalTime.parse(strip(values, "endTime")));
+    @GetMapping("/edit/{station}")
+    public String editStation(@PathVariable BusStation station, Model model) {
+        model.addAttribute("cities", cityRepository.findAll());
+        model.addAttribute("station", station);
+
+        return "edit_station";
     }
 
-    private String strip(Map<String, String> values, String key) {
-        return values.get(key).replace("\r", "");
+    @PostMapping("{station}")
+    public String putStation(@PathVariable("station") BusStation stationFromDb, @RequestBody String station) {
+        service.updateEntity(stationFromDb, station);
+
+        return "redirect:/station";
+    }
+
+    @GetMapping("/delete/{station}")
+    public String deleteStation(@PathVariable Long station) {
+
+        service.deleteEntity(station);
+
+        return "redirect:/station";
+    }
+
+    @PostMapping
+    public String addStation(@RequestBody String station) {
+
+        service.saveEntity(station);
+
+        return "redirect:/station";
     }
 }

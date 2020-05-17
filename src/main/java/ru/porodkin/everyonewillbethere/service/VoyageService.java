@@ -40,11 +40,6 @@ public class VoyageService {
         Voyage voy = getVoyage(voyage);
         BeanUtils.copyProperties(voy, voyageFromDb, "id");
 
-        System.out.println();
-        System.out.println(voy);
-        System.out.println();
-        System.out.println(voyageFromDb);
-
         voyageRepository.save(voyageFromDb);
     }
 

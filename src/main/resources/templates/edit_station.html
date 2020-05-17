@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактор станции</title>
+</head>
+<body>
+<form th:action="@{/station/{id}(id = ${station.id})}" method="post" enctype="text/plain">
+    <div>
+        <label><h3>Автобусная станция</h3></label>
+        <div>
+            <label>Название</label>
+            <input type="text" name="name" th:value="${station.name}">
+        </div>
+        <div>
+            <label>Адрес</label>
+            <input type="text" name="address" th:value="${station.address}">
+        </div>
+        <div>
+            <label>Телефон</label>
+            <input type="tel" name="phone"  th:value="${station.address}">
+        </div>
+        <div>
+            <label>Время открытия</label>
+            <input type="text" name="startTime"  th:value="${station.startTime}">
+        </div>
+        <div>
+            <label>Время закрытия</label>
+            <input type="text" name="endTime" th:value="${station.endTime}">
+        </div>
+        <div>
+            <label>Город отправления</label>
+            <select name="city">
+                <option th:each="city : ${cities}"
+                        th:value="${city.id}"
+                        th:text="${city.name}"
+                        th:selected="${city.id == station.city.id}">
+                </option>
+            </select>
+        </div>
+    </div>
+    <button type="submit">Сохранить</button>
+</form>
+</body>
+</html>

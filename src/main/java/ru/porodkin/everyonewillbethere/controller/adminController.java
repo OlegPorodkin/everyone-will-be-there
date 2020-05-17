@@ -43,12 +43,8 @@ public class adminController {
 
     @PostMapping("{voyage}")
     public String putVoyage(@PathVariable("voyage") Voyage voyageFromDb, @RequestBody String voyage) {
-        System.out.println("******************************************");
-
         service.updateEntity(voyageFromDb, voyage);
-//        BeanUtils.copyProperties(voyage, voyageFromDb, "id");
-//
-//        voyageRepository.save(voyageFromDb);
+
         return "redirect:/admin";
     }
 
@@ -64,32 +60,6 @@ public class adminController {
     public String saveVoyage(@RequestBody String voyage) {
 
         service.saveEntity(voyage);
-
-//        String[] split = voyage.split("\n");
-//        Map<String, String> values = new HashMap<>();
-//
-//        Voyage voy = new Voyage();
-//        Set<DayOfWeek> dayOfWeeks = new HashSet<>();
-//
-//        Arrays.stream(split).map(s -> s.split("=")).forEach(keyVal -> {
-//            if (keyVal[0].equals("daysToDeparts")) {
-//                String s = keyVal[1];
-//                String replace = s.replace("\r", "");
-//                dayOfWeeks.add(DayOfWeek.of(Integer.parseInt(replace)));
-//            } else {
-//                values.put(keyVal[0], keyVal[1]);
-//            }
-//        });
-//
-//        voy.setPrice(Long.valueOf(strip(values, "price")));
-//        voy.setTravelTime(LocalTime.parse(strip(values, "travelTime")));
-//        voy.setDayOfDeparture(dayOfWeeks);
-//        voy.setTravelTimeDeparture(strip(values, "travelTimeDeparture"));
-//        voy.setTravelTimeDestination(strip(values, "travelTimeDestination"));
-//        voy.setPointOfDeparture(busStationRepository.getOne(Long.valueOf(strip(values, "pointOfDeparture"))));
-//        voy.setPointOfDestination(busStationRepository.getOne(Long.valueOf(strip(values, "pointOfDestination"))));
-//
-//        voyageRepository.save(voy);
 
         return "redirect:/admin";
     }
