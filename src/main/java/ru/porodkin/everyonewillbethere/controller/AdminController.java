@@ -3,12 +3,18 @@ package ru.porodkin.everyonewillbethere.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import ru.porodkin.everyonewillbethere.entity.Role;
+import ru.porodkin.everyonewillbethere.entity.User;
 import ru.porodkin.everyonewillbethere.entity.Voyage;
 import ru.porodkin.everyonewillbethere.repository.BusStationRepository;
 import ru.porodkin.everyonewillbethere.repository.VoyageRepository;
+import ru.porodkin.everyonewillbethere.service.UserService;
 import ru.porodkin.everyonewillbethere.service.VoyageService;
 
 import java.time.DayOfWeek;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/admin")
@@ -17,11 +23,25 @@ public class AdminController {
     private final VoyageRepository voyageRepository;
     private final BusStationRepository busStationRepository;
     private final VoyageService service;
+    private final UserService userService;
 
-    public AdminController(VoyageRepository voyageRepository, BusStationRepository busStationRepository, VoyageService service) {
+    public AdminController(VoyageRepository voyageRepository, BusStationRepository busStationRepository, VoyageService service, UserService userService) {
         this.voyageRepository = voyageRepository;
         this.busStationRepository = busStationRepository;
         this.service = service;
+        this.userService = userService;
+    }
+
+    @GetMapping("/users")
+    public String viewAllUser(Model model) {
+        Map<String, Object> data = new HashMap<>();
+        List<User> all = userService.findAll();
+
+        data.put("users", all);
+        data.put("roles", Role.values());
+
+        model.addAttribute("allUsers", data);
+        return "user_admin";
     }
 
     @GetMapping
