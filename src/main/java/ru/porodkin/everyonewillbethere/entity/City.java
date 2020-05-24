@@ -12,6 +12,6 @@ public class City {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
-    @OneToMany
+    @OneToMany(mappedBy = "city")
     private Set<BusStation> busStations;
 }

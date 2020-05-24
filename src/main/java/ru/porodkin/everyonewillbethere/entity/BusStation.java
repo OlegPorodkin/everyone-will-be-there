@@ -19,6 +19,7 @@ public class BusStation {
     private LocalTime startTime;
     private LocalTime endTime;
     @ManyToOne
+    @JoinColumn(name = "city_id")
     private City city;
 
     @OneToMany

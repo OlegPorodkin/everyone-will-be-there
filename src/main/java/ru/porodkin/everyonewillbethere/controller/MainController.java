@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import ru.porodkin.everyonewillbethere.entity.User;
 import ru.porodkin.everyonewillbethere.repository.VoyageRepository;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Controller
 @RequestMapping("/")
 public class MainController {
@@ -20,6 +23,12 @@ public class MainController {
 
     @GetMapping
     public String index(@AuthenticationPrincipal User user, Model model) {
+
+        if (user != null){
+            List<String> roleName = user.getRoles().stream().map(Enum::name).collect(Collectors.toList());
+            model.addAttribute("roleName", roleName);
+        }
+
         model.addAttribute("profile", user);
         return "index";
     }

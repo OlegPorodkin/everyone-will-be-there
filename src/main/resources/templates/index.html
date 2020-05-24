@@ -4,18 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <title>Все там будем</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-<form action="/result" method="get">
-    <div>
-        <label>Откуда</label>
-        <input type="text" name="fromDest" required placeholder="Откуда"/>
+<div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Онлайн автовокзал</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Главная</a>
+                </li>
+                <div th:if="${profile == null}">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Авторизация</a>
+                    </li>
+                </div>
+                <div th:if="${profile == null}">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/registration">Регистрация</a>
+                    </li>
+                </div>
+                <div th:if="${profile != null && (roleName.contains('SUPER_ADMIN') || roleName.contains('ADMIN'))}">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin">Консоль администратора</a>
+                    </li>
+                </div>
+            </ul>
+            <div th:if="${profile != null}">
+                <form v-if="profile" action="/logout" method="post">
+                    <button type="submit" class="btn btn-primary mr-3">Выйти</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-3">
+        <form action="/result" method="get">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="fromSearch">Откуда</label>
+                    <input type="text" id="fromSearch" class="form-control" name="fromDest" required
+                           placeholder="Откуда"/>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="toSearch">Куда</label>
+                    <input type="text" id="toSearch" class="form-control" name="toDest" required placeholder="Откуда"/>
+                </div>
+                <button class="btn btn-primary" type="submit">Найти</button>
+            </div>
+        </form>
     </div>
-    <div>
-        <label>Куда</label>
-        <input type="text" name="toDest" required placeholder="Откуда"/>
-    </div>
-    <button type="submit">Найти</button>
-</form>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 </body>
 </html>
