@@ -31,34 +31,38 @@
         </div>
     </div>
 </nav>
-<form action="/result" method="get">
-    <div>
-        <label>Откуда</label>
-        <input type="text" name="fromDest" required placeholder="Откуда"/>
-    </div>
-    <div>
-        <label>Куда</label>
-        <input type="text" name="toDest" required placeholder="Откуда"/>
-    </div>
-    <button type="submit">Найти</button>
-</form>
-<span th:name="${from}" th:text="${from}"></span>
-<span >&#10142;</span>
-<span th:name="${to}" th:text="${to}"></span>
-<table>
-    <thead>
+<div class="container mt-3">
+    <form action="/result" method="get">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="fromSearch">Откуда</label>
+                <input type="text" id="fromSearch" class="form-control" name="fromDest" required
+                       placeholder="Откуда"/>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="toSearch">Куда</label>
+                <input type="text" id="toSearch" class="form-control" name="toDest" required placeholder="Откуда"/>
+            </div>
+            <button class="btn btn-primary" type="submit">Найти</button>
+        </div>
+    </form>
+    <span th:name="${from}" th:text="${from}"></span>
+    <span>&#10142;</span>
+    <span th:name="${to}" th:text="${to}"></span>
+    <table class="table">
+        <thead class="thead-dark">
         <tr>
-            <th>#</th>
-            <th>Отправление</th>
-            <th>Прибытие</th>
-            <th>Время в пути</th>
-            <th>Дни отправления</th>
-            <th>Цена</th>
+            <th scope="col">#</th>
+            <th scope="col">Отправление</th>
+            <th scope="col">Прибытие</th>
+            <th scope="col">Время в пути</th>
+            <th scope="col">Дни отправления</th>
+            <th scope="col">Цена</th>
         </tr>
-    </thead>
-    <tbody>
+        </thead>
+        <tbody>
         <tr th:each="voyage,iter : ${voyages}">
-            <td th:text="${iter.index + 1}"></td>
+            <th scope="row" th:text="${iter.index + 1}"></th>
             <td>
                 <span th:text="${voyage.travelTimeDeparture}"></span><br>
                 <a th:href="@{/station/{id}(id = ${voyage.getPointOfDeparture().id})}">
@@ -67,7 +71,7 @@
             </td>
             <td>
                 <span th:text="${voyage.travelTimeDestination}"></span><br>
-                <a th:href="@{/station/{id}(id = ${voyage.getPointOfDestination().id})}" >
+                <a th:href="@{/station/{id}(id = ${voyage.getPointOfDestination().id})}">
                     <span th:text="${voyage.getPointOfDestination().name}"></span>
                 </a>
             </td>
@@ -90,7 +94,8 @@
             </td>
             <td th:text="${voyage.price}"></td>
         </tr>
-    </tbody>
-</table>
+        </tbody>
+    </table>
+</div>
 </body>
 </html>
