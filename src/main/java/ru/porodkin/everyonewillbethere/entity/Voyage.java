@@ -1,14 +1,18 @@
 package ru.porodkin.everyonewillbethere.entity;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.DayOfWeek;
 import java.time.LocalTime;
 import java.util.Set;
 
-@Data
+//@Data
 @Entity
+@Getter
+@Setter
 public class Voyage {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
